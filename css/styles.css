@@ -111,6 +111,7 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        margin: 30px;
     }
 
     .left-section, .right-section {
@@ -119,5 +120,18 @@ body {
 
     .left-section {
         align-items: center;
+    }
+
+    .login-form h2 {
+        font-size: 28px;
+    }
+    .login-form h2 {
+        font-size: 32px;
+    }
+    .icon-task img {
+        width: 155px;
+    }
+    .welcome-message {
+        text-align: center;
     }
 }
