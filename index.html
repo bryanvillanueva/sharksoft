@@ -25,11 +25,11 @@
             </div>
         </div>
         <div class="right-section">
-            <form id="loginForm" class="login-form">
+            <form id="loginForm" class="login-form" action="php/login.php" method="POST">
                 <h2>Iniciar Sesion</h2>
 
-                <input type="text" id="username" placeholder="Email o nombre de usuario" required>
-                <input type="password" id="password" placeholder="Contrasena" required>
+                <input type="text" id="username" name="username" placeholder="Email o nombre de usuario" required>
+                <input type="password" id="password" name="password" placeholder="Contrasena" required>
                 <button type="submit">Iniciar sesion</button>
 
                 <p>No tienes una cuenta? <a href="#">Crear una cuenta</a></p>
