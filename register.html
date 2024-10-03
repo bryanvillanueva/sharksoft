@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar usuario</title>
+    <link rel="stylesheet" href="css/register-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="icon-task">
+                    <img src="src/img/logo.png" alt="Cms Icon"/>
+                </div>
+            <h1>Configuremos su cuenta</h1>
+            <p>Añada usuarios con la información correcta al sistema. Rellene todos los campos siguientes.</p>
+        </div>
+        <div class="right-section">
+            <form id="registerForm" class="registration-form" action="php/register.php" method="POST" enctype="multipart/form-data">
+                <input type="text" id="full_name" name="full_name" placeholder="Nombre Completo" required>
+                <input type="text" id="username" name="username" placeholder="Nombre de Usuario" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="contraseña" required>
+                <input type="date" id="birth_date" name="birth_date" placeholder="Fecha de Nacimiento">
+                <input type="text" id="position" name="position" placeholder="Posición">
+                
+                <label for="user_role">Rol en el sistema:</label>
+                <select id="user_role" name="user_role" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+
+                <label for="profile_picture">Foto de Perfil:</label>
+                <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/reg-scripts.js"></script>
+</body>
+</html>

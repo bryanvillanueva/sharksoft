@@ -1,0 +1,117 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
+    background-color: #2B91FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    background-color: #003491;
+    color: white;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/*     align-items: center; */
+}
+.icon-task img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.left-section h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-align: left;
+}
+
+.left-section p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.right-section {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.registration-form input,
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #003491;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2B91FF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #003491;
+}
+
+label {
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    color: #003491;
+    margin-bottom: 5px;
+}
+::placeholder {
+    color: #003491;
+    font-family: 'Nunito', Helvetica, Arial, Lucida, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        padding: 20px;
+    }
+
+    .left-section {
+        align-items: center;
+    }
+}
