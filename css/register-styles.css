@@ -14,6 +14,18 @@ body {
     height: 100vh;
 }
 
+.HomeLink {
+margin-right: 15px;
+cursor: pointer;
+color: #fff;
+}
+
+.HomeLink:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transition: 1s linear;
+}
+
 .container {
     display: flex;
     max-width: 900px;
@@ -113,5 +125,8 @@ label {
 
     .left-section {
         align-items: center;
+    }
+    .HomeLink {
+        display: none;
     }
 }
