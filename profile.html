@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="css/prof-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="sidebar">
+            <div class="user-info">
+                <img src="user_image_path" alt="User Image" class="profile-picture">
+                <h2 id="user_name">Nombre de usuario</h2>
+            </div>
+            <ul class="menu">
+                <li>Perfil</li>
+                <li>Ajustes</li>
+                <li>Salir</li>
+            </ul>
+        </div>
+
+        <div class="profile-content">
+            <h1>Detalles del Perfil</h1>
+            <form id="profileForm" action="php/profile.php" method="POST" enctype="multipart/form-data">
+                <div class="profile-section">
+                    <label for="profile_picture">Imagen de Perfil</label>
+                    <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+                </div>
+                
+                <div class="profile-section">
+                    <label for="first_name">Nombre</label>
+                    <input type="text" id="first_name" name="first_name" value="First Name">
+                </div>
+                
+                <div class="profile-section">
+                    <label for="last_name">Apellido</label>
+                    <input type="text" id="last_name" name="last_name" value="Last Name">
+                </div>
+
+                <div class="profile-section">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="email@domain.com">
+                </div>
+
+                <div class="profile-section">
+                    <label for="phone">Numbero de Telefono</label>
+                    <input type="text" id="phone" name="phone" value="+1234567890">
+                </div>
+
+                <div class="profile-section">
+                    <label for="position">Posicion</label>
+                    <input type="text" id="position" name="position" value="User Position">
+                </div>
+
+                <button type="submit" class="save-button">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

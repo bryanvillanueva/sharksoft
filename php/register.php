@@ -4,6 +4,7 @@ $username = "root";
 $password = "";
 $dbname = "login_system";
 
+
 // Crear la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -30,7 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $checkQuery->get_result();
 
     if ($result->num_rows > 0) {
-        echo "Username or Email already in use.";
+        echo '<script type="text/javascript">
+    alert("el nombre de usuario o el correo ya estan en uso");
+    window.location.href="../register.html";</script>';
     } else {
         // Manejo de la subida de la imagen de perfil
         $target_dir = "uploads/";
@@ -43,9 +46,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Mover el archivo subido a la carpeta
         if (move_uploaded_file($profile_picture["tmp_name"], $target_file)) {
-            echo "The file " . htmlspecialchars(basename($profile_picture["name"])) . " has been uploaded.";
+            
+            echo '<script type="text/javascript">
+    console.log("el archivo ha sido cargado con  exito");</script>';
         } else {
-            echo "Sorry, there was an error uploading your file.";
+            echo '<script type="text/javascript">
+    alert("Ha ocurrido un error al intentar guardar tu archivo");
+    window.location.href="../register.html";</script>';
         }
 
         // Insertar los datos del usuario en la base de datos
@@ -54,7 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ssssssss", $full_name, $username, $email, $password, $birth_date, $position, $user_role, $target_file);
 
         if ($stmt->execute()) {
-            echo "New user added successfully!";
+            echo'<script type="text/javascript">
+    alert("Usuario creado con exito");
+    window.location.href="../register.html";
+    </script>';
         } else {
             echo "Error: " . $stmt->error;
         }

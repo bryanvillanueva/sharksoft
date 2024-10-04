@@ -19,11 +19,8 @@ margin-right: 15px;
 cursor: pointer;
 color: #fff;
 }
-
-.HomeLink:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transition: 1s linear;
+.HomeLink img {
+    width: 50px;
 }
 
 .container {
